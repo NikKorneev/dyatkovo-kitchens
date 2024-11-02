@@ -1,18 +1,15 @@
 import { Preload, Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Header, Images, Lens } from "./components";
+import { CustomText, Images, Lens } from "./components";
 
 export function App() {
 	return (
 		<>
-			<div className="container relative mx-auto">
-				<Header />
-			</div>
 			<Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
 				<ScrollControls damping={0.2} pages={3} distance={0.5}>
 					<Lens>
 						<Scroll>
-							{/* <CustomText /> */}
+							<CustomText />
 							<Images />
 						</Scroll>
 						<Scroll html>

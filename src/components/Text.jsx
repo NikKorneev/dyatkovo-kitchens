@@ -1,35 +1,26 @@
-import { Text } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
+import { extend, useThree } from "@react-three/fiber";
+import { useRef } from "react";
+import { Text as TroikaText } from "troika-three-text";
 
-export const CustomText = () => {
-	const state = useThree();
-	const { width, height } = state.viewport.getCurrentViewport(
-		state.cameta,
-		[0, 0, 12]
-	);
+// Extend three.js with TroikaText
+extend({ TroikaText });
+
+export function CustomText() {
+	const textRef = useRef();
+	const { viewport } = useThree(); // Получаем ширину и высоту области просмотра
+	const { width, height } = viewport; // Здесь width и height — это размеры viewport
 
 	return (
-		<>
-			<Text
+		<mesh position={[width / 40.5, height / 10, 12]} ref={textRef}>
+			<troikaText
+				text="кухни"
+				font="/Montserrat-SemiBold.ttf"
+				fontSize={0.4}
+				color="black"
 				anchorX="left"
-				position={[-width / 2.5, -height / 10, 12]}
-				font="/fonts/Montserrat-SemiBold.ttf"
-			>
-				Kitchen
-			</Text>
-			{/* <THREEText
-				anchorX="right"
-				position={[width / 2.5, -height * 2, 12]}
-				font="/fonts/Montserrat-SemiBold.ttf"
-			>
-				Для тех, кто ценит лаконичность и функциональность
-			</THREEText>
-			<THREEText
-				position={[0, -height * 4.624, 12]}
-				font="/fonts/Montserrat-Medium.ttf"
-			>
-				Модель Bridge
-			</THREEText> */}
-		</>
+			/>
+		</mesh>
 	);
-};
+}
+
+export default CustomText;
