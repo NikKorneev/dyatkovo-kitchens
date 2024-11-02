@@ -1,6 +1,6 @@
 import { Preload, Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { CustomText, Images, Lens } from "./components";
+import { Images, Lens, Typography } from "./components";
 
 export function App() {
 	return (
@@ -9,7 +9,7 @@ export function App() {
 				<ScrollControls damping={0.2} pages={3} distance={0.5}>
 					<Lens>
 						<Scroll>
-							<CustomText />
+							<Typography />
 							<Images />
 						</Scroll>
 						<Scroll html>
