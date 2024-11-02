@@ -7,8 +7,8 @@ extend({ TroikaText });
 
 export function CustomText() {
 	const textRef = useRef();
-	const { viewport } = useThree(); // Получаем ширину и высоту области просмотра
-	const { width, height } = viewport; // Здесь width и height — это размеры viewport
+	const { viewport } = useThree();
+	const { width, height } = viewport;
 
 	return (
 		<mesh position={[width / 40.5, height / 10, 12]} ref={textRef}>
