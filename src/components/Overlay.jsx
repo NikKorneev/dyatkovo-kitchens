@@ -1,4 +1,5 @@
 import { Logo } from "../constants";
+import { Href } from "./Href";
 export const Overlay = () => {
 	return (
 		<div
@@ -14,13 +15,11 @@ export const Overlay = () => {
 			<a href="https://dyatkovo.ru" className="absolute left-4 top-1">
 				<img src={Logo} alt="logo" className="w-[192px] h-20 px-1" />
 			</a>
-			<div className="absolute right-5 top-5">
-				<a
+			<div className="absolute right-4 top-5">
+				<Href
+					text="Перейти на главную"
 					href="https://dyatkovo.ru/kuhni/"
-					className="font-montserrat text-customGreen text-[1rem] underline hover:underline"
-				>
-					Перейти на главную
-				</a>
+				/>
 			</div>
 
 			<div

@@ -1,12 +1,19 @@
 import { Image, useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
-import { HeaderMain, HeaderSecondary } from "../constants";
+import {
+	HeaderMain,
+	HeaderSecondary,
+	TripleLong,
+	TripleMid,
+	TripleShort,
+} from "../constants";
 
 export function Images() {
 	const group = useRef();
 	const data = useScroll();
-	const { height } = useThree((state) => state.viewport);
+
+	const { height, width } = useThree((state) => state.viewport);
 	useFrame(() => {
 		group.current.children[0].material.zoom = 1 + data.range(0, 1 / 3) / 3;
 		group.current.children[1].material.zoom = 1 + data.range(0, 1 / 3) / 3;
@@ -19,9 +26,24 @@ export function Images() {
 				url={HeaderMain}
 			/>
 			<Image
-				position={[2.5, -1.42, 0]}
+				position={[2.5, -1.42, 1]}
 				scale={[3.5, 2.4, 2]}
 				url={HeaderSecondary}
+			/>
+			<Image
+				position={[width / -5.9, -5.6, 1]}
+				scale={[width / 3.6, width / 4.1, 2]}
+				url={TripleShort}
+			/>
+			<Image
+				position={[width / 20, -5.5, 4]}
+				scale={[width / 7.5, width / 4, 2]}
+				url={TripleMid}
+			/>
+			<Image
+				position={[width / 6.4, -5.5, 6]}
+				scale={[width / 10.8, width / 3.8, 2]}
+				url={TripleLong}
 			/>
 		</group>
 	);

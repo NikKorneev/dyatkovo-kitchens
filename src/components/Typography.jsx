@@ -12,13 +12,12 @@ export function Typography() {
 		<>
 			<Text
 				children="кухни"
-				characters="КУХНИкухни"
 				anchorX="right"
-				font="/Montserrat-SemiBold.ttf"
+				font="/Inter-Regular.woff"
 				letterSpacing={0.01}
 				fontSize={0.7}
 				color="black"
-				position={[width / 1.58, height / 9, 6]}
+				position={[width / 1.4, height / 7, 6]}
 			/>
 			<Text
 				children="Для тех, кто ценит лаконичность и функциональность"
@@ -26,7 +25,16 @@ export function Typography() {
 				font="/Montserrat-SemiBold.ttf"
 				fontSize={0.09}
 				color="black"
-				position={[width / 2.9, -height * 1.5, 4]}
+				position={[width / 2.9, -height * 1.6, 4]}
+			/>
+			<Text
+				children="МОДЕЛЬ BRIDGE"
+				anchorX="right"
+				font="/Inter-Regular.woff"
+				letterSpacing={-0.01}
+				fontSize={width / 12}
+				color="black"
+				position={[width / 8.4, -height * 1.98, 6]}
 			/>
 		</>
 	);
