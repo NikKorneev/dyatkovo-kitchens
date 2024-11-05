@@ -36,6 +36,24 @@ export function Typography() {
 				color="black"
 				position={[width / 8.4, -height * 1.98, 6]}
 			/>
+			<Text
+				children="СВОБОДА ВЫБОРА"
+				anchorX="right"
+				font="/Inter-Regular.woff"
+				letterSpacing={-0.05}
+				fontSize={width / 24}
+				color="black"
+				position={[width / 1.58, -height * 3.92, 0]}
+			/>
+			<Text
+				children="комфорт"
+				anchorX="right"
+				font="/Inter-Regular.woff"
+				letterSpacing={0.05}
+				fontSize={width / 10}
+				color="black"
+				position={[width / 5, -height * 5.35 - height / 4, 0]}
+			/>
 		</>
 	);
 }

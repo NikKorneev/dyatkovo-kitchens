@@ -5,8 +5,8 @@ import { Href, Images, Lens, Typography } from "./components";
 export function App() {
 	return (
 		<>
-			<Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
-				<ScrollControls damping={0.2} pages={3} distance={0.5}>
+			<Canvas camera={{ position: [0, 0, 20], fov: 15 }} dpr={[2, 4]}>
+				<ScrollControls damping={0.2} pages={3.7} distance={0.5}>
 					<Lens>
 						<Scroll>
 							<Typography />
@@ -25,6 +25,22 @@ export function App() {
 									/>
 									<p className="font-bold">
 										От 200 тыс. руб.
+									</p>
+								</div>
+							</div>
+							<div
+								style={{
+									transform:
+										"translate3d(calc(61vw - 2px), 205vh, 0)",
+								}}
+							>
+								<div className="flex w-[20vw] justify-between">
+									<p className="font-extralight">
+										Разнообразие сочетаний выразительных
+										древесных текстур с палитрой трендовых
+										декоров, корпуса в трех различных цветах
+										и возможность индивидуального подбора
+										цвета цоколя
 									</p>
 								</div>
 							</div>

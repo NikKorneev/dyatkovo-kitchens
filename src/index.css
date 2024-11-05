@@ -37,4 +37,10 @@ a {
 		font-weight: normal;
 		font-style: normal;
 	}
+	@font-face {
+		font-family: "Montserrat";
+		src: url("/Montserrat-Light.ttf") format("ttf");
+		font-weight: 300;
+		font-style: normal;
+	}
 }

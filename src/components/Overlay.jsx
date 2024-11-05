@@ -12,7 +12,11 @@ export const Overlay = () => {
 				height: "100%",
 			}}
 		>
-			<a href="https://dyatkovo.ru" className="absolute left-4 top-1">
+			<a
+				href="https://dyatkovo.ru"
+				target="_blank"
+				className="absolute left-4 top-1"
+			>
 				<img src={Logo} alt="logo" className="w-[192px] h-20 px-1" />
 			</a>
 			<div className="absolute right-4 top-5">
@@ -31,7 +35,7 @@ export const Overlay = () => {
 				}}
 			>
 				<p>created at</p>
-				02/11/2024
+				05/11/2024
 			</div>
 		</div>
 	);
