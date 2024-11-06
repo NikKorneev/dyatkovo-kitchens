@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 export const Lens = ({ children, damping = 0.15, ...props }) => {
 	const ref = useRef();
-	const { nodes } = useGLTF("/Lens-transformed.glb");
+	const { nodes } = useGLTF("/lens-transformed.glb");
 	const buffer = useFBO();
 	const viewport = useThree((state) => state.viewport);
 	const [scene] = useState(() => new THREE.Scene());
